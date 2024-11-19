@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="lan">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Contact Us - Cosmetic Store
+  </title>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet"/>
+  <style>
+   body {
+            font-family: 'Roboto', sans-serif;
+        }
+  </style>
+ </head>
+ <body class="bg-gray-100">
+  <header class="bg-white shadow">
+   <div class="container mx px-6 py-3">"
+    <div class="flex items-center justify-between">
+     <div class="text-xl font-semibold text-gray-700">
+      <a class="text-2xl font-bold text-gray-800 hover:text-gray-700" href="cosmetic store.html">
+       Cosmetic Store
+      </a>
+     </div>
+     <div class="flex items-center">
+      <nav class="hidden md:flex space-x-4">
+         <a class="text-gray-700 hover:text-gray-900" href="login.html">
+        Login
+       </a>
+       <a class="text-gray-700 hover:text-gray-900" href="home.html">
+        Home
+       </a>
+       <a class="text-gray-700 hover:text-gray-900" href="shop.html">
+        Shop
+       </a>
+       <a class="text-gray-700 hover:text-gray-900" href="about.html">
+        About
+       </a>
+       <a class="text-gray-700 hover:text-gray-900" href="contact.html">
+        Contact
+       </a>
+       <a class="text-gray-700 hover:text-gray-900" href="cosmetic store.html">
+        Cosmetik Store
+       </a>
+      </nav>
+      <div class="flex items-center ml-4">
+       <a class="text-gray-700 hover:text-gray-900" href="keranjang.html">
+        <i class="fas fa-shopping-cart">
+        </i>
+       </a>
+      </div>
+     </div>
+    </div>
+   </div>
+  </header>
+  <main class="my-8">
+   <div class="container mx-auto px-6">
+    <div class="bg-white shadow-md rounded-lg overflow-hidden">
+     <img alt="Image of a person writing on a notepad with a laptop and coffee cup on the table" class="w-full h-64 object-cover" height="400" src="17.jfif" width="1200"/>
+     <div class="p-6">
+      <h2 class="text-3xl font-bold text-gray-800">
+       Contact Us
+      </h2>
+      <p class="text-gray-600 mt-4">
+       Kami ingin mendengar pendapat Anda! Apakah Anda memiliki pertanyaan tentang produk kami, memerlukan bantuan dalam pemesanan, atau hanya ingin memberikan masukan kepada kami, jangan ragu untuk menghubungi kami.
+      </p>
+      <form class="mt-6" id="contactForm">
+       <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div>
+         <label class="block text-gray-700" for="name">
+          Name
+         </label>
+         <input class="w-full mt-2 p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-600" id="name" name="name" type="text"/>
+        </div>
+        <div>
+         <label class="block text-gray-700" for="email">
+          Email
+         </label>
+         <input class="w-full mt-2 p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-600" id="email" name="email" type="email"/>
+        </div>
+       </div>
+       <div class="mt-4">
+        <label class="block text-gray-700" for="message">
+         Message
+        </label>
+        <textarea class="w-full mt-2 p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-600" id="message" name="message" rows="4">
+        </textarea>
+       </div>
+       <div class="mt-4">
+        <button class="bg-indigo-600 text-white px-4 py-2 rounded hover:bg-indigo-800" id="sendMessageButton" type="button">
+         Send Message via WhatsApp
+        </button>
+       </div>
+      </form>
+     </div>
+    </div>
+   </div>
+  </main>
+  <footer class="bg-white shadow mt-8">
+   <div class="container mx-auto px-6 py-4">
+    <div class="flex justify-between items-center">
+     <div class="text-gray-600">
+      © 2024 Cosmetic Store. All rights reserved.
+     </div>
+     <div class="flex space-x-4">
+      <a class="text-gray-600 hover:text-gray-800" href="#">
+       <i class="fab fa-facebook-f">
+       </i>
+      </a>
+      <a class="text-gray-600 hover:text-gray-800" href="#">
+       <i class="fab fa-twitter">
+       </i>
+      </a>
+      <a class="text-gray-600 hover:text-gray-800" href="#">
+       <i class="fab fa-instagram">
+       </i>
+      </a>
+     </div>
+    </div>
+   </div>
+  </footer>
+  <script>
+document.getElementById('sendMessageButton').addEventListener('click', function() {
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const message = document.getElementById('message').value;
+        const phoneNumber = 'YOUR_PHONE_NUMBER'; // Replace with your WhatsApp number
+
+        const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(`Name: ${name}\nEmail: ${email}\nMessage: ${message}`)}`;
+        window.open(whatsappUrl, '_blank');
+    });
+  </script>
+ </body>
+</html>
